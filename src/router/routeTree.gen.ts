@@ -13,12 +13,8 @@
 import { Route as rootRoute } from './../routes/__root';
 import { Route as LayoutImport } from './../routes/_layout';
 import { Route as LayoutIndexImport } from './../routes/_layout/index';
-import { Route as LayoutAboutImport } from './../routes/_layout/about';
-import { Route as LayoutHardwareIndexImport } from './../routes/_layout/hardware/index';
-import { Route as LayoutToolsToolIdImport } from './../routes/_layout/tools/$toolId';
-import { Route as LayoutIntroIntroIdImport } from './../routes/_layout/intro/$introId';
-import { Route as LayoutDocumentationDocIdImport } from './../routes/_layout/documentation/$docId';
-import { Route as LayoutBenefitsBenefitIdImport } from './../routes/_layout/benefits/$benefitId';
+import { Route as LayoutIntermediateImport } from './../routes/_layout/intermediate';
+import { Route as LayoutBeginnerImport } from './../routes/_layout/beginner';
 
 // Create/Update Routes
 
@@ -32,33 +28,13 @@ const LayoutIndexRoute = LayoutIndexImport.update({
   getParentRoute: () => LayoutRoute,
 } as any);
 
-const LayoutAboutRoute = LayoutAboutImport.update({
-  path: '/about',
+const LayoutIntermediateRoute = LayoutIntermediateImport.update({
+  path: '/intermediate',
   getParentRoute: () => LayoutRoute,
 } as any);
 
-const LayoutHardwareIndexRoute = LayoutHardwareIndexImport.update({
-  path: '/hardware/',
-  getParentRoute: () => LayoutRoute,
-} as any);
-
-const LayoutToolsToolIdRoute = LayoutToolsToolIdImport.update({
-  path: '/tools/$toolId',
-  getParentRoute: () => LayoutRoute,
-} as any);
-
-const LayoutIntroIntroIdRoute = LayoutIntroIntroIdImport.update({
-  path: '/intro/$introId',
-  getParentRoute: () => LayoutRoute,
-} as any);
-
-const LayoutDocumentationDocIdRoute = LayoutDocumentationDocIdImport.update({
-  path: '/documentation/$docId',
-  getParentRoute: () => LayoutRoute,
-} as any);
-
-const LayoutBenefitsBenefitIdRoute = LayoutBenefitsBenefitIdImport.update({
-  path: '/benefits/$benefitId',
+const LayoutBeginnerRoute = LayoutBeginnerImport.update({
+  path: '/beginner',
   getParentRoute: () => LayoutRoute,
 } as any);
 
@@ -73,11 +49,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutImport;
       parentRoute: typeof rootRoute;
     };
-    '/_layout/about': {
-      id: '/_layout/about';
-      path: '/about';
-      fullPath: '/about';
-      preLoaderRoute: typeof LayoutAboutImport;
+    '/_layout/beginner': {
+      id: '/_layout/beginner';
+      path: '/beginner';
+      fullPath: '/beginner';
+      preLoaderRoute: typeof LayoutBeginnerImport;
+      parentRoute: typeof LayoutImport;
+    };
+    '/_layout/intermediate': {
+      id: '/_layout/intermediate';
+      path: '/intermediate';
+      fullPath: '/intermediate';
+      preLoaderRoute: typeof LayoutIntermediateImport;
       parentRoute: typeof LayoutImport;
     };
     '/_layout/': {
@@ -87,41 +70,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutIndexImport;
       parentRoute: typeof LayoutImport;
     };
-    '/_layout/benefits/$benefitId': {
-      id: '/_layout/benefits/$benefitId';
-      path: '/benefits/$benefitId';
-      fullPath: '/benefits/$benefitId';
-      preLoaderRoute: typeof LayoutBenefitsBenefitIdImport;
-      parentRoute: typeof LayoutImport;
-    };
-    '/_layout/documentation/$docId': {
-      id: '/_layout/documentation/$docId';
-      path: '/documentation/$docId';
-      fullPath: '/documentation/$docId';
-      preLoaderRoute: typeof LayoutDocumentationDocIdImport;
-      parentRoute: typeof LayoutImport;
-    };
-    '/_layout/intro/$introId': {
-      id: '/_layout/intro/$introId';
-      path: '/intro/$introId';
-      fullPath: '/intro/$introId';
-      preLoaderRoute: typeof LayoutIntroIntroIdImport;
-      parentRoute: typeof LayoutImport;
-    };
-    '/_layout/tools/$toolId': {
-      id: '/_layout/tools/$toolId';
-      path: '/tools/$toolId';
-      fullPath: '/tools/$toolId';
-      preLoaderRoute: typeof LayoutToolsToolIdImport;
-      parentRoute: typeof LayoutImport;
-    };
-    '/_layout/hardware/': {
-      id: '/_layout/hardware/';
-      path: '/hardware';
-      fullPath: '/hardware';
-      preLoaderRoute: typeof LayoutHardwareIndexImport;
-      parentRoute: typeof LayoutImport;
-    };
   }
 }
 
@@ -129,13 +77,9 @@ declare module '@tanstack/react-router' {
 
 export const routeTree = rootRoute.addChildren({
   LayoutRoute: LayoutRoute.addChildren({
-    LayoutAboutRoute,
+    LayoutBeginnerRoute,
+    LayoutIntermediateRoute,
     LayoutIndexRoute,
-    LayoutBenefitsBenefitIdRoute,
-    LayoutDocumentationDocIdRoute,
-    LayoutIntroIntroIdRoute,
-    LayoutToolsToolIdRoute,
-    LayoutHardwareIndexRoute,
   }),
 });
 
@@ -153,41 +97,21 @@ export const routeTree = rootRoute.addChildren({
     "/_layout": {
       "filePath": "_layout.tsx",
       "children": [
-        "/_layout/about",
-        "/_layout/",
-        "/_layout/benefits/$benefitId",
-        "/_layout/documentation/$docId",
-        "/_layout/intro/$introId",
-        "/_layout/tools/$toolId",
-        "/_layout/hardware/"
+        "/_layout/beginner",
+        "/_layout/intermediate",
+        "/_layout/"
       ]
     },
-    "/_layout/about": {
-      "filePath": "_layout/about.tsx",
+    "/_layout/beginner": {
+      "filePath": "_layout/beginner.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/intermediate": {
+      "filePath": "_layout/intermediate.tsx",
       "parent": "/_layout"
     },
     "/_layout/": {
       "filePath": "_layout/index.tsx",
-      "parent": "/_layout"
-    },
-    "/_layout/benefits/$benefitId": {
-      "filePath": "_layout/benefits/$benefitId.tsx",
-      "parent": "/_layout"
-    },
-    "/_layout/documentation/$docId": {
-      "filePath": "_layout/documentation/$docId.tsx",
-      "parent": "/_layout"
-    },
-    "/_layout/intro/$introId": {
-      "filePath": "_layout/intro/$introId.tsx",
-      "parent": "/_layout"
-    },
-    "/_layout/tools/$toolId": {
-      "filePath": "_layout/tools/$toolId.tsx",
-      "parent": "/_layout"
-    },
-    "/_layout/hardware/": {
-      "filePath": "_layout/hardware/index.tsx",
       "parent": "/_layout"
     }
   }

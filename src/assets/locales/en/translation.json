@@ -1,7 +1,7 @@
 {
   "home": {
-    "title": "Home",
-    "description": "Welcome to the home page, this is an Kickstarter Kit to give you an intro into Comsysto Reply World and how things function here."
+    "title": "Welcome to React Workshop",
+    "description": "This is a simple React Workshop where you will learn basics about React."
   },
   "settings": {
     "title": "Settings",

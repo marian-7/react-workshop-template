@@ -1,7 +1,7 @@
 {
   "home": {
-    "title": "Startseite",
-    "description": "Willkommen auf der Startseite, dies ist ein Kickstarter-Kit, um Ihnen eine Einführung in die Comsysto Reply-Welt und die Funktionsweise hier zu geben."
+    "title": "Willkommen zum React-Workshop",
+    "description": "Dies ist ein einfacher React-Workshop, in dem Sie die Grundlagen von React erlernen."
   },
   "settings": {
     "title": "Einstellungen",

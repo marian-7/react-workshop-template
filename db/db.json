@@ -1,0 +1,75 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "email": "alice@example.com",
+      "role": "participant"
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "email": "bob@example.com",
+      "role": "participant"
+    },
+    {
+      "id": 3,
+      "name": "Charlie",
+      "email": "charlie@example.com",
+      "role": "instructor"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Introduction to React",
+      "content": "Learn the basics of React including components, state, and props.",
+      "authorId": 3,
+      "date": "2024-08-01"
+    },
+    {
+      "id": 2,
+      "title": "Advanced React Patterns",
+      "content": "Explore advanced patterns in React such as higher-order components and hooks.",
+      "authorId": 3,
+      "date": "2024-08-15"
+    },
+    {
+      "id": 3,
+      "title": "Understanding React State Management",
+      "content": "A deep dive into state management in React using context and various libraries.",
+      "authorId": 2,
+      "date": "2024-07-25"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postId": 1,
+      "authorId": 1,
+      "content": "Great introduction to React!",
+      "date": "2024-08-02"
+    },
+    {
+      "id": 2,
+      "postId": 1,
+      "authorId": 2,
+      "content": "Very helpful, thank you!",
+      "date": "2024-08-03"
+    },
+    {
+      "id": 3,
+      "postId": 2,
+      "authorId": 1,
+      "content": "Advanced patterns are quite tricky but well explained.",
+      "date": "2024-08-16"
+    },
+    {
+      "id": 4,
+      "postId": 3,
+      "authorId": 3,
+      "content": "Excellent insights on state management.",
+      "date": "2024-07-26"
+    }
+  ]
+}
