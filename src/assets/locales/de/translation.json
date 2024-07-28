@@ -1,0 +1,11 @@
+{
+  "home": {
+    "title": "Startseite",
+    "description": "Willkommen auf der Startseite, dies ist ein Kickstarter-Kit, um Ihnen eine Einführung in die Comsysto Reply-Welt und die Funktionsweise hier zu geben."
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "changeLanguage": "Sprache ändern",
+    "description": "Hier können Sie die Einstellungen der Anwendung ändern."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "home": {
+    "title": "Početna stranica",
+    "description": "Dobrodošli na početnu stranicu, ovo je Kickstarter Kit koji će vam dati uvod u svijet Comsysto Replya i kako stvari funkcioniraju ovdje."
+  },
+  "settings": {
+    "title": "Postavke",
+    "changeLanguage": "Promijeni jezik",
+    "description": "Ovdje možete promijeniti postavke aplikacije."
+  }
+}
